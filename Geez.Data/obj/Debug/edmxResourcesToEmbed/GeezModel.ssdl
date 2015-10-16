@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GeezModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="GeezModelStoreContainer">
+    <EntitySet Name="Address" EntityType="GeezModel.Store.Address" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Application" EntityType="GeezModel.Store.Application" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="GeezModel.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Checkin" EntityType="GeezModel.Store.Checkin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Fault" EntityType="GeezModel.Store.Fault" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Menu" EntityType="GeezModel.Store.Menu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rating" EntityType="GeezModel.Store.Rating" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Request" EntityType="GeezModel.Store.Request" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Response" EntityType="GeezModel.Store.Response" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Service" EntityType="GeezModel.Store.Service" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceProvider" EntityType="GeezModel.Store.ServiceProvider" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceProviderPicture" EntityType="GeezModel.Store.ServiceProviderPicture" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceProviderRating" EntityType="GeezModel.Store.ServiceProviderRating" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Setting" EntityType="GeezModel.Store.Setting" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Event" EntityType="GeezModel.Store.Event" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="GeezModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TransactionLog" EntityType="GeezModel.Store.TransactionLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Recommendation" EntityType="GeezModel.Store.Recommendation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Message" EntityType="GeezModel.Store.Message" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceProviderService1" EntityType="GeezModel.Store.ServiceProviderService1" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ServiceProvider_Address" Association="GeezModel.Store.FK_ServiceProvider_Address">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="ServiceProvider" EntitySet="ServiceProvider" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceProvider_Category" Association="GeezModel.Store.FK_ServiceProvider_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="ServiceProvider" EntitySet="ServiceProvider" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Checkin_ServiceProvider" Association="GeezModel.Store.FK_Checkin_ServiceProvider">
+      <End Role="ServiceProvider" EntitySet="ServiceProvider" />
+      <End Role="Checkin" EntitySet="Checkin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Menu" Association="GeezModel.Store.FK_Menu_Menu">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="Menu1" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceProviderRating_Service" Association="GeezModel.Store.FK_ServiceProviderRating_Service">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="ServiceProviderRating" EntitySet="ServiceProviderRating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceProviderPicture_ServiceProvider" Association="GeezModel.Store.FK_ServiceProviderPicture_ServiceProvider">
+      <End Role="ServiceProvider" EntitySet="ServiceProvider" />
+      <End Role="ServiceProviderPicture" EntitySet="ServiceProviderPicture" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceProviderRating_ServiceProvider" Association="GeezModel.Store.FK_ServiceProviderRating_ServiceProvider">
+      <End Role="ServiceProvider" EntitySet="ServiceProvider" />
+      <End Role="ServiceProviderRating" EntitySet="ServiceProviderRating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceProviderService1_Service" Association="GeezModel.Store.FK_ServiceProviderService1_Service">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="ServiceProviderService1" EntitySet="ServiceProviderService1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceProviderService1_ServiceProvider" Association="GeezModel.Store.FK_ServiceProviderService1_ServiceProvider">
+      <End Role="ServiceProvider" EntitySet="ServiceProvider" />
+      <End Role="ServiceProviderService1" EntitySet="ServiceProviderService1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Events_Events" Association="GeezModel.Store.FK_Events_Events">
+      <End Role="ServiceProvider" EntitySet="ServiceProvider" />
+      <End Role="Event" EntitySet="Event" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recommendation_ServiceProvider" Association="GeezModel.Store.FK_Recommendation_ServiceProvider">
+      <End Role="ServiceProvider" EntitySet="ServiceProvider" />
+      <End Role="Recommendation" EntitySet="Recommendation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Application" Association="GeezModel.Store.FK_Menu_Application">
+      <End Role="Application" EntitySet="Application" />
+      <End Role="Menu" EntitySet="Menu" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Region" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Zone" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Street" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Details" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AssemblyName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ClassName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="ServiceUrl" Type="nvarchar" Nullable="true" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" Nullable="true" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Checkin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="ServiceProviderId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fault">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TransactionTime" Type="datetime" Nullable="false" />
+    <Property Name="FaultCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FaultString" Type="nvarchar" Nullable="false" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ParentId" Type="int" Nullable="false" />
+    <Property Name="ApplicationId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MethodName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Rating">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Value" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Request">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TransactionTime" Type="datetime" Nullable="false" />
+    <Property Name="MSISDN" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="USSDServiceCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="USSDRequestString" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Response" Type="bit" Nullable="true" />
+    <Property Name="ChargingFlag" Type="bit" Nullable="true" />
+    <Property Name="ChargeCode" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Response">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="USSDResponseString" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="Action" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ResponseCode" Type="int" Nullable="true" />
+    <Property Name="TransactionTime" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ServiceName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" Nullable="true" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ServiceProvider">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="AddressId" Type="bigint" Nullable="false" />
+    <Property Name="OrganizationName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OpeningDays" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Details" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ServiceProviderPicture">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="ServiceProviderId" Type="int" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="Title" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ServiceProviderRating">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="ServiceProviderId" Type="int" Nullable="false" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="AverageRating" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="RatingCount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SettingKey" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SettingValue" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="ServiceProviderId" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Details" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Role" Type="bit" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MobileNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DateRegistered" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransactionLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="TransactionId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="State" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="MenuId" Type="bigint" Nullable="false" />
+    <Property Name="LoggedMenu" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Recommendation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="RecommendedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RecommendedTo" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ServiceProviderId" Type="int" Nullable="false" />
+    <Property Name="RecommendedOn" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="MobileNumber" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Subject" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Body" Type="varchar(max)" Nullable="false" />
+    <Property Name="SentOn" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceProviderService1">
+    <Key>
+      <PropertyRef Name="Service_Id" />
+      <PropertyRef Name="ServiceProvider_Id" />
+    </Key>
+    <Property Name="Service_Id" Type="int" Nullable="false" />
+    <Property Name="ServiceProvider_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ServiceProvider_Address">
+    <End Role="Address" Type="GeezModel.Store.Address" Multiplicity="1" />
+    <End Role="ServiceProvider" Type="GeezModel.Store.ServiceProvider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceProvider">
+        <PropertyRef Name="AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceProvider_Category">
+    <End Role="Category" Type="GeezModel.Store.Category" Multiplicity="1" />
+    <End Role="ServiceProvider" Type="GeezModel.Store.ServiceProvider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceProvider">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Checkin_ServiceProvider">
+    <End Role="ServiceProvider" Type="GeezModel.Store.ServiceProvider" Multiplicity="1" />
+    <End Role="Checkin" Type="GeezModel.Store.Checkin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceProvider">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Checkin">
+        <PropertyRef Name="ServiceProviderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Menu">
+    <End Role="Menu" Type="GeezModel.Store.Menu" Multiplicity="1" />
+    <End Role="Menu1" Type="GeezModel.Store.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Menu1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceProviderRating_Service">
+    <End Role="Service" Type="GeezModel.Store.Service" Multiplicity="1" />
+    <End Role="ServiceProviderRating" Type="GeezModel.Store.ServiceProviderRating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceProviderRating">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceProviderPicture_ServiceProvider">
+    <End Role="ServiceProvider" Type="GeezModel.Store.ServiceProvider" Multiplicity="1" />
+    <End Role="ServiceProviderPicture" Type="GeezModel.Store.ServiceProviderPicture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceProvider">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceProviderPicture">
+        <PropertyRef Name="ServiceProviderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceProviderRating_ServiceProvider">
+    <End Role="ServiceProvider" Type="GeezModel.Store.ServiceProvider" Multiplicity="1" />
+    <End Role="ServiceProviderRating" Type="GeezModel.Store.ServiceProviderRating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceProvider">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceProviderRating">
+        <PropertyRef Name="ServiceProviderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Events_Events">
+    <End Role="ServiceProvider" Type="GeezModel.Store.ServiceProvider" Multiplicity="1" />
+    <End Role="Event" Type="GeezModel.Store.Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceProvider">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="ServiceProviderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recommendation_ServiceProvider">
+    <End Role="ServiceProvider" Type="GeezModel.Store.ServiceProvider" Multiplicity="1" />
+    <End Role="Recommendation" Type="GeezModel.Store.Recommendation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceProvider">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Recommendation">
+        <PropertyRef Name="ServiceProviderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Application">
+    <End Role="Application" Type="GeezModel.Store.Application" Multiplicity="1" />
+    <End Role="Menu" Type="GeezModel.Store.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Application">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceProviderService1_Service">
+    <End Role="Service" Type="GeezModel.Store.Service" Multiplicity="1" />
+    <End Role="ServiceProviderService1" Type="GeezModel.Store.ServiceProviderService1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceProviderService1">
+        <PropertyRef Name="Service_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceProviderService1_ServiceProvider">
+    <End Role="ServiceProviderService1" Type="GeezModel.Store.ServiceProviderService1" Multiplicity="*" />
+    <End Role="ServiceProvider" Type="GeezModel.Store.ServiceProvider" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceProvider">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceProviderService1">
+        <PropertyRef Name="ServiceProvider_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

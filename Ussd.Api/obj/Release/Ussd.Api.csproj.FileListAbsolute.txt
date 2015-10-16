@@ -1,0 +1,6 @@
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\bin\Release\Ussd.Api.dll
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\bin\Release\Ussd.Api.pdb
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\obj\Release\Ussd.Api.csprojResolveAssemblyReference.cache
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\obj\Release\Ussd.Api.dll
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\obj\Release\Ussd.Api.pdb
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\bin\Release\CookComputing.XmlRpcV2.dll

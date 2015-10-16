@@ -1,0 +1,13 @@
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\Geez.Business.dll.config
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\Geez.Business.dll
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\Geez.Business.pdb
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\EntityFramework.dll
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\Geez.Data.dll
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\Ussd.Api.dll
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\Geez.Data.pdb
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\Ussd.Api.pdb
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\EntityFramework.xml
+D:\Projects\Geez\AllCode\Geez\Geez.Business\obj\Release\Geez.Business.csprojResolveAssemblyReference.cache
+D:\Projects\Geez\AllCode\Geez\Geez.Business\obj\Release\Geez.Business.dll
+D:\Projects\Geez\AllCode\Geez\Geez.Business\obj\Release\Geez.Business.pdb
+D:\Projects\Geez\AllCode\Geez\Geez.Business\bin\Release\CookComputing.XmlRpcV2.dll

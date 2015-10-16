@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6636ca11cc8e466089e41c5f57accc5b" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="GeezModel.Address" Width="1.5" PointX="4.6062032415560461" PointY="28.77252968995484" />
+        <EntityTypeShape EntityType="GeezModel.Application" Width="1.5" PointX="0.96487095438170756" PointY="17.008634187750815" />
+        <EntityTypeShape EntityType="GeezModel.Category" Width="1.5" PointX="5.5566005602276887" PointY="16.323239155264218" />
+        <EntityTypeShape EntityType="GeezModel.Checkin" Width="1.5" PointX="0.021189652393194685" PointY="14.929793990650119" />
+        <EntityTypeShape EntityType="GeezModel.Fault" Width="1.5" PointX="5.4098686284431574" PointY="17.827252485708918" />
+        <EntityTypeShape EntityType="GeezModel.Menu" Width="1.5" PointX="0.45180820694743107" PointY="19.915628099774768" />
+        <EntityTypeShape EntityType="GeezModel.Rating" Width="1.5" PointX="8.7416282970186465" PointY="29.139912961581683" />
+        <EntityTypeShape EntityType="GeezModel.Request" Width="1.5" PointX="2.2063958934538048" PointY="13.373882612853256" />
+        <EntityTypeShape EntityType="GeezModel.Response" Width="1.5" PointX="2.3413570906693844" PointY="20.320272782966622" />
+        <EntityTypeShape EntityType="GeezModel.Service" Width="1.5" PointX="7.4264689364593792" PointY="20.712532068003217" />
+        <EntityTypeShape EntityType="GeezModel.ServiceProvider" Width="1.5" PointX="3.8488650414388932" PointY="2.8948310180077472" />
+        <EntityTypeShape EntityType="GeezModel.ServiceProviderPicture" Width="1.5" PointX="11.982760224483329" PointY="2.0996302972080327" />
+        <EntityTypeShape EntityType="GeezModel.ServiceProviderRating" Width="1.5" PointX="11.402349404712371" PointY="7.6887782251875745" />
+        <EntityTypeShape EntityType="GeezModel.Setting" Width="1.5" PointX="8.7085148341527745" PointY="28.236156715190113" />
+        <AssociationConnector Association="GeezModel.FK_ServiceProvider_Address" />
+        <AssociationConnector Association="GeezModel.FK_ServiceProvider_Category" />
+        <AssociationConnector Association="GeezModel.FK_Checkin_ServiceProvider" />
+        <AssociationConnector Association="GeezModel.FK_Menu_Menu" />
+        <AssociationConnector Association="GeezModel.FK_ServiceProviderRating_Service" />
+        <AssociationConnector Association="GeezModel.FK_ServiceProviderPicture_ServiceProvider" />
+        <AssociationConnector Association="GeezModel.FK_ServiceProviderRating_ServiceProvider" />
+        <AssociationConnector Association="GeezModel.ServiceProviderService1" />
+        <EntityTypeShape EntityType="GeezModel.Event" Width="1.5" PointX="6.375" PointY="23.125" />
+        <EntityTypeShape EntityType="GeezModel.User" Width="1.5" PointX="8.0351937133982752" PointY="12.701906865789512" />
+        <AssociationConnector Association="GeezModel.FK_Events_Events" />
+        <EntityTypeShape EntityType="GeezModel.TransactionLog" Width="1.5" PointX="3" PointY="17.625" />
+        <EntityTypeShape EntityType="GeezModel.Recommendation" Width="1.5" PointX="1.7673815497045318" PointY="17.3378516069324" />
+        <AssociationConnector Association="GeezModel.FK_Recommendation_ServiceProvider" />
+        <EntityTypeShape EntityType="GeezModel.Message" Width="1.5" PointX="8.625" PointY="2.125" />
+        <AssociationConnector Association="GeezModel.FK_Menu_Application" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

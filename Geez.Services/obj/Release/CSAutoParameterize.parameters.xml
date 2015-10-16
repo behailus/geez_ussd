@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-Geez.Services-20130325002407;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-Geez.Services-20130325002407.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Projects\\Geez\\AllCode\\Geez\\Geez\.Services\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="GeezEntities-Web.config Connection String" description="GeezEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/GeezModel.csdl|res://*/GeezModel.ssdl|res://*/GeezModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\sqlexpress;initial catalog=Geez;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Projects\\Geez\\AllCode\\Geez\\Geez\.Services\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GeezEntities']/@connectionString" />
+  </parameter>
+</parameters>

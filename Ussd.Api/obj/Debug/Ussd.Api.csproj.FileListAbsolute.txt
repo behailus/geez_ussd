@@ -1,0 +1,12 @@
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\bin\Debug\Ussd.Api.dll
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\bin\Debug\Ussd.Api.pdb
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\obj\Debug\Ussd.Api.dll
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\obj\Debug\Ussd.Api.pdb
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\obj\Debug\Ussd.Api.csprojResolveAssemblyReference.cache
+D:\Projects\Geez\AllCode\Geez\Ussd.Api\bin\Debug\CookComputing.XmlRpcV2.dll
+D:\Projects\Projects\Geez\AllCode\Geez\Ussd.Api\bin\Debug\Ussd.Api.dll
+D:\Projects\Projects\Geez\AllCode\Geez\Ussd.Api\bin\Debug\Ussd.Api.pdb
+D:\Projects\Projects\Geez\AllCode\Geez\Ussd.Api\bin\Debug\CookComputing.XmlRpcV2.dll
+D:\Projects\Projects\Geez\AllCode\Geez\Ussd.Api\obj\Debug\Ussd.Api.csprojResolveAssemblyReference.cache
+D:\Projects\Projects\Geez\AllCode\Geez\Ussd.Api\obj\Debug\Ussd.Api.dll
+D:\Projects\Projects\Geez\AllCode\Geez\Ussd.Api\obj\Debug\Ussd.Api.pdb

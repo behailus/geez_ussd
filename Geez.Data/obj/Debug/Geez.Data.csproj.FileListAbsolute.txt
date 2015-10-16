@@ -1,0 +1,14 @@
+D:\Projects\Geez\AllCode\Geez\Geez.Data\bin\Geez.Data.dll
+D:\Projects\Geez\AllCode\Geez\Geez.Data\bin\Geez.Data.pdb
+D:\Projects\Geez\AllCode\Geez\Geez.Data\obj\Debug\Geez.Data.dll
+D:\Projects\Geez\AllCode\Geez\Geez.Data\obj\Debug\Geez.Data.pdb
+D:\Projects\Geez\AllCode\Geez\Geez.Data\bin\EntityFramework.dll
+D:\Projects\Geez\AllCode\Geez\Geez.Data\bin\EntityFramework.xml
+D:\Projects\Geez\AllCode\Geez\Geez.Data\obj\Debug\Geez.Data.csprojResolveAssemblyReference.cache
+D:\Projects\Projects\Geez\AllCode\Geez\Geez.Data\bin\Geez.Data.dll
+D:\Projects\Projects\Geez\AllCode\Geez\Geez.Data\bin\Geez.Data.pdb
+D:\Projects\Projects\Geez\AllCode\Geez\Geez.Data\bin\EntityFramework.dll
+D:\Projects\Projects\Geez\AllCode\Geez\Geez.Data\bin\EntityFramework.xml
+D:\Projects\Projects\Geez\AllCode\Geez\Geez.Data\obj\Debug\Geez.Data.csprojResolveAssemblyReference.cache
+D:\Projects\Projects\Geez\AllCode\Geez\Geez.Data\obj\Debug\Geez.Data.dll
+D:\Projects\Projects\Geez\AllCode\Geez\Geez.Data\obj\Debug\Geez.Data.pdb

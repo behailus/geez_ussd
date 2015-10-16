@@ -1,0 +1,32 @@
+﻿@model Ussd.Api.UssdResponseMessage
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<fieldset>
+    <legend>UssdResponseMessage</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TransactionId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TransactionId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.USSDResponseString)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.USSDResponseString)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ResponseCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ResponseCode)
+    </div>
+</fieldset>
